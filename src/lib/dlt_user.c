@@ -448,6 +448,7 @@ DltReturnValue dlt_init_file(const char *name)
     }
 
     dlt_user.dlt_is_file = 1;
+    dlt_is_file_check = dlt_user.dlt_is_file;
 
     /* open DLT output file */
     dlt_user.dlt_log_handle = open(name, O_WRONLY | O_CREAT, S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH); /* mode: wb */
